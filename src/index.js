@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { MemoryRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { store } from './store'
 
 // Styles
@@ -17,10 +17,10 @@ import Home from './containers/Home/'
 
 ReactDOM.render((
   <Provider store={store}>
-    <MemoryRouter>
+    <HashRouter>
       <Switch>
         <Route path="/" name="Home" component={Home}/>
       </Switch>
-    </MemoryRouter>
+    </HashRouter>
   </Provider>
 ), document.getElementById('root'));

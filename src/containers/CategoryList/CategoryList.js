@@ -15,7 +15,6 @@ class CategoryList extends Component{
   }
 
   renderCategoryCards() {
-    console.log(this.props.all)
     let categoryList = this.props.all
     if(categoryList.length === 0){
       return (

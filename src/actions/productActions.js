@@ -1,4 +1,5 @@
 export const GET_PRODUCT_SUCCESS = 'GET_PRODUCT_SUCCESS'
+export const SELECT_PRODUCT = 'SELECT_PRODUCT'
 
 // mock api that returns a list fo product
 import  { productAPI }  from '../util/mockServer.js'
@@ -7,14 +8,21 @@ export function getProduct(cid) {
   return dispatch => {
     // mock API call
     productAPI(cid, response => {
-      dispatch(getCategorySuccess(response))
+      dispatch(getProductSuccess(response))
     })
   }
 }
 
-function getCategorySuccess(data) {
+function getProductSuccess(data) {
   return {
     type: GET_PRODUCT_SUCCESS,
+    payload: data,
+  }
+}
+
+export function selectProduct(data) {
+  return {
+    type: SELECT_PRODUCT,
     payload: data,
   }
 }

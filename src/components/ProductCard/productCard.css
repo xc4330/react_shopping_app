@@ -1,0 +1,7 @@
+:local(.container){
+  width: 80%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  background-color: grey;
+}

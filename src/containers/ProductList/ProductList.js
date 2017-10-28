@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 //actions
-import { getProduct } from '../../actions/productActions'
+import { getProduct, selectProduct } from '../../actions/productActions'
 //components
 import ProductCard from '../../components/ProductCard'
 //style
@@ -15,7 +15,6 @@ class ProductList extends Component{
   }
 
   renderProductCards() {
-    console.log(this.props.productList)
     let productList = this.props.productList
     if(productList.length === 0){
       return (
@@ -39,7 +38,8 @@ class ProductList extends Component{
   }
 
   handleProductSelect(product) {
-    console.log(product);
+    this.props.selectProduct(product)
+    this.props.history.push('/product-detail')
   }
 
 
@@ -68,4 +68,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { getProduct })(ProductList)
+export default connect(mapStateToProps, { getProduct, selectProduct })(ProductList)
