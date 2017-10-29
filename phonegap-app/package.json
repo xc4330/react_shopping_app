@@ -1,0 +1,17 @@
+{
+    "name": "com.daimler.servicetracker",
+    "version": "1.0.0",
+    "displayName": "Aftersales Tracker",
+    "cordova": {
+        "platforms": [
+            "android",
+            "ios"
+        ],
+        "plugins": {}
+    },
+    "dependencies": {
+        "cordova-android": "^6.2.3",
+        "cordova-fabric-plugin": "^1.1.9",
+        "cordova-ios": "^4.4.0"
+    }
+}

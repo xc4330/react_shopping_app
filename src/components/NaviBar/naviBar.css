@@ -1,7 +1,7 @@
 :local(.container){
   width: 100%;
   height: var(--navi-bar-height);
-  background-color: lightGray;
+  background-color: white;
   display: flex;
   flex-direction: row;
 }
@@ -49,6 +49,7 @@
   font-size: 25px!important;
   padding: 0!important;
   margin-right: 3px;
+  background-color: lightgrey;
 }
 
 :local(.cartIndicator){
