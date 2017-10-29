@@ -12,7 +12,6 @@ import ShoppingCart from '../ShoppingCart'
 //styles
 import styles from './home.css'
 
-
 class Home extends Component{
 
   constructor(props) {
@@ -23,6 +22,8 @@ class Home extends Component{
     return (
       <div className={styles.container}>
         <NaviBar
+          currentPath = {this.props.history.location.pathname}
+          goBack = {() => this.props.history.goBack()}
           showCart = {() => this.props.history.push('/shopping-cart')}
         />
         <Switch>

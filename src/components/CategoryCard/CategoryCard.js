@@ -12,8 +12,13 @@ export default class CategoryCard extends Component{
 
   render() {
     return (
-      <div className={styles.container} onClick = {this.props.onSelect}>
-        {this.props.category.name}
+      <div className={styles.container + " card"} onClick = {this.props.onSelect}>
+        <div className={styles.cardHeader + " card-header"}>
+          {this.props.category.name}
+        </div>
+        <div className={styles.imageContainer}>
+          <img src={this.props.category.image} className={styles.image}/>
+        </div>
       </div>
     )
   }

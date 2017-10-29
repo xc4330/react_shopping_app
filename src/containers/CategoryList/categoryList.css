@@ -1,0 +1,4 @@
+:local(.container){
+  width: calc(100% - var(--card-margin) * 2);
+  margin-top: var(--card-margin);
+}

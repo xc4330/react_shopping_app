@@ -5,3 +5,44 @@
   display: flex;
   flex-direction: row;
 }
+
+:local(.leftItemGroup){
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+:local(.centerItemGroup){
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+:local(.rightItemGroup){
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+:local(.goBackBtn){
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  font-size: 25px!important;
+  background-color: transparent;
+}
+
+:local(.cartBtn){
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  font-size: 25px!important;
+}

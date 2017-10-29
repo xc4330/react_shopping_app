@@ -51,7 +51,6 @@ class CategoryList extends Component{
   render() {
     return (
       <div className={styles.container}>
-        CategoryList
         {this.renderCategoryCards()}
       </div>
     )
