@@ -22,14 +22,25 @@ class ProductDetail extends Component{
     return (
       <div className={styles.container}>
         <div className={styles.imageContainer}>
+          <img src={this.props.selectedProduct.image} className={styles.image}/>
         </div>
         <div className={styles.textContainer}>
-          {this.props.selectedProduct.name}
-        </div>
-        <div className={styles.btnContainer}>
-          <button className="btn btn-primary" onClick={this.handleAddToCart}>
-            Add to cart
-          </button>
+          <div className={styles.header}>
+            <div className={styles.titleContainer}>
+              <div className={styles.nameLabel}>
+                {this.props.selectedProduct.name}
+              </div>
+              <div className={styles.priceLabel}>
+                $ {this.props.selectedProduct.price}
+              </div>
+            </div>
+            <button className={styles.addBtn + " btn btn-primary"} onClick={this.handleAddToCart}>
+              Add to cart
+            </button>
+          </div>
+          <div className={styles.contentContainer}>
+            {this.props.selectedProduct.description}
+          </div>
         </div>
       </div>
     )

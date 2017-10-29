@@ -1,4 +1,5 @@
 :local(.container){
   width: calc(100% - var(--card-margin) * 2);
   margin-top: var(--card-margin);
+  height: calc(100% - var(--navi-bar-height));
 }

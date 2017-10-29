@@ -11,7 +11,6 @@ export default class NaviBar extends Component{
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className={styles.container}>
         <div className={styles.leftItemGroup}>
@@ -30,6 +29,7 @@ export default class NaviBar extends Component{
             onClick={this.props.showCart}
             style={this.props.hideCartBtn ? {display : "none"} : {}}
           />
+          <div className={styles.cartIndicator} style={this.props.cartIsEmpty || this.props.hideCartBtn ? {display : "none"} : {}} />
         </div>
       </div>
     )

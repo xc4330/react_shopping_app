@@ -16,28 +16,20 @@ class ShoppingCart extends Component{
 
   renderProductCards() {
     let itemList = this.props.itemList
-    if(itemList.length === 0){
-      return (
-        <div>
-          No item added
-        </div>
-      )
-    } else {
-      return (
-        itemList.map((item,index) => {
-          return (
-            <ProductCard
-              product = {item.product}
-              onSelect = {() => this.handleProductSelect(item.product)}
-              mode = "cart" // allow product card to show delete btn and quantity
-              onDelete = {() => this.props.removeItem(item.product)}
-              quantity = {item.quantity}
-              key={index}
-            />
-          )
-        })
-      )
-    }
+    return (
+      itemList.map((item,index) => {
+        return (
+          <ProductCard
+            product = {item.product}
+            onSelect = {() => this.handleProductSelect(item.product)}
+            mode = "cart" // allow product card to show delete btn and quantity
+            onDelete = {() => this.props.removeItem(item.product)}
+            quantity = {item.quantity}
+            key={index}
+          />
+        )
+      })
+    )
   }
 
   handleProductSelect(product) {
@@ -48,8 +40,17 @@ class ShoppingCart extends Component{
   render(){
     return (
       <div className={styles.container}>
-        ShoppingCart
-        {this.renderProductCards()}
+        {this.props.itemList.length === 0 ?
+          <div className={styles.noItemLabel}>
+            No product added
+          </div>
+          : this.renderProductCards()
+        }
+        {this.props.itemList.length === 0 ? '' :
+          <div>
+            Total price: $ {this.props.itemList.map(item => item.product.price * item.quantity).reduce((sum, value) => sum + value, 0)}
+          </div>
+        }
       </div>
     )
   }

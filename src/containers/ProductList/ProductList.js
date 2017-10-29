@@ -43,7 +43,6 @@ class ProductList extends Component{
   }
 
 
-
   componentDidMount(){
     this.props.getProduct(this.props.selectedCategory.cid)
   }
@@ -51,7 +50,6 @@ class ProductList extends Component{
   render() {
     return (
       <div className={styles.container}>
-        ProductList
         {this.renderProductCards()}
       </div>
     )

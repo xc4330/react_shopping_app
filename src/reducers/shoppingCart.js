@@ -22,6 +22,12 @@ export default function(state = INIT_STATE, action) {
         itemList: removeItem([...state.itemList], action.payload),
       }
       break
+    case "persist/REHYDRATE": // loading shopping cart on app start
+      return {
+        ...state,
+        itemList: action.payload.shoppingCart.itemList,
+      }
+      break
     default:
       return state
   }

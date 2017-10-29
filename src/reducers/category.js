@@ -22,6 +22,12 @@ export default function(state = INIT_STATE, action) {
         selected: action.payload,
       }
       break
+    case "persist/REHYDRATE":
+      return {
+        ...state,
+        itemList: action.payload.category.all,
+      }
+      break
     default:
       return state
   }

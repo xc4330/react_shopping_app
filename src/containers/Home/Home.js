@@ -27,6 +27,7 @@ class Home extends Component{
           showCart = {() => this.props.history.push('/shopping-cart')}
           hideCartBtn = {this.shouldHideCartBtn()}
           hideBackBtn = {this.shouldHideBackBtn()}
+          cartIsEmpty = {this.props.addedProducts.length === 0 ? true : false}
         />
         <Switch>
           <Route path="/categories" name="CategoryList" component={CategoryList}/>
@@ -77,9 +78,11 @@ function mapStateToProps(state) {
   let { product, category, shoppingCart } = state
   let selectedProduct = product.selected
   let selectedCategory = category.selected
+  let addedProducts = shoppingCart.itemList
   return {
     selectedProduct,
     selectedCategory,
+    addedProducts,
   }
 }
 

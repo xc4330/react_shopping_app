@@ -54,7 +54,7 @@
     "reactstrap": "^5.0.0-alpha.3",
     "redux": "^3.7.2",
     "redux-localstorage": "^1.0.0-rc5",
-    "redux-persist": "^5.1.0",
+    "redux-persist": "^4.8.2",
     "redux-thunk": "^2.2.0",
     "request": "^2.83.0",
     "simple-line-icons": "^2.4.1"

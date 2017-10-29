@@ -1,6 +1,6 @@
 :local(.container){
   width: 100%;
-  height: 70px;
+  height: var(--navi-bar-height);
   background-color: lightGray;
   display: flex;
   flex-direction: row;
@@ -21,6 +21,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
 }
 
 :local(.rightItemGroup){
@@ -37,6 +38,7 @@
   width: 50px;
   border-radius: 25px;
   font-size: 25px!important;
+  padding: 0!important;
   background-color: transparent;
 }
 
@@ -45,4 +47,15 @@
   width: 50px;
   border-radius: 25px;
   font-size: 25px!important;
+  padding: 0!important;
+  margin-right: 3px;
+}
+
+:local(.cartIndicator){
+  background-color: red;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  border-radius: 8px;
+  top: 10px;
 }
