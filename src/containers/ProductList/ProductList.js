@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 //actions
 import { getProduct, selectProduct } from '../../actions/productActions'
 //components
@@ -50,7 +51,12 @@ class ProductList extends Component{
   render() {
     return (
       <div className={styles.container}>
-        {this.renderProductCards()}
+        <ReactCSSTransitionGroup
+          transitionName="card-animation"
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={200}>
+            {this.renderProductCards()}
+        </ReactCSSTransitionGroup>
       </div>
     )
   }

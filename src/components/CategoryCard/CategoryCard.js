@@ -7,9 +7,6 @@ export default class CategoryCard extends Component{
     super(props)
   }
 
-  componentDidMount(){
-  }
-
   render() {
     return (
       <div className={styles.container + " card"} onClick = {this.props.onSelect}>

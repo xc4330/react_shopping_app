@@ -10,7 +10,6 @@ export function categoryAPI (callback){
 
 export function productAPI (cid, callback){
   let response = productJSON.filter(product => product.cid === cid)
-  console.log(response);
   setTimeout( _ => {
     callback(response)
   }, 1000)

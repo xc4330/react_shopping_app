@@ -7,9 +7,6 @@ export default class ProductCard extends Component{
     super(props)
   }
 
-  componentDidMount(){
-  }
-
   render() {
     return (
       <div className={styles.container}>

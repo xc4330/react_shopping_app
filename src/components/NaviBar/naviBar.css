@@ -1,7 +1,7 @@
 :local(.container){
   width: 100%;
   height: var(--navi-bar-height);
-  background-color: white;
+  background-color: var(--color-primary-4);
   display: flex;
   flex-direction: row;
 }
@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: 16px;
+  color: white;
 }
 
 :local(.rightItemGroup){
@@ -40,6 +41,12 @@
   font-size: 25px!important;
   padding: 0!important;
   background-color: transparent;
+  color: white;
+}
+
+:local(.goBackBtn):active{
+  color: var(--color-primary-5);
+  transform: translateY(4px);
 }
 
 :local(.cartBtn){
@@ -49,7 +56,13 @@
   font-size: 25px!important;
   padding: 0!important;
   margin-right: 3px;
-  background-color: lightgrey;
+  background-color: var(--color-primary-2);
+  color: white;
+}
+
+:local(.cartBtn):active{
+  background-color: var(--color-primary-3);
+  transform: translateY(4px);
 }
 
 :local(.cartIndicator){

@@ -3,6 +3,7 @@
 }
 
 :local(.cardHeader){
+  background-color: white!important;
 }
 
 :local(.imageContainer){

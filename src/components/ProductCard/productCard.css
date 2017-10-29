@@ -3,7 +3,7 @@
   height: 100px;
   display: flex;
   flex-direction: row;
-  background-color: lightGrey;
+  background-color: var(--color-primary-5);
   margin-bottom: var(--card-margin);
   justify-content: space-between;
   align-items: center;
@@ -50,13 +50,18 @@
 }
 
 :local(.deleteBtn){
-  background-color: TRANSPARENT;
+  background-color: transparent;
   font-size: 20px!important;
   height: 40px;
   width: 40px;
   padding: 0!important;
   color: red;
   border-radius: 20px;
+}
+
+:local(.deleteBtn):active{
+  transform: translateY(4px);
+  background-color: var(--color-primary-0);
 }
 
 :local(.quantityLabel){

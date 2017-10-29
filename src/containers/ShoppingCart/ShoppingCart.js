@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 //actions
 import { removeItem } from '../../actions/shoppingCartActions'
 import { selectProduct } from '../../actions/productActions'
@@ -44,7 +45,14 @@ class ShoppingCart extends Component{
           <div className={styles.noItemLabel}>
             No product added
           </div>
-          : this.renderProductCards()
+          :
+          <ReactCSSTransitionGroup
+            transitionName="card-animation"
+            transitionAppearTimeout={200}
+            transitionEnterTimeout={200}
+            transitionLeaveTimeout={500}>
+            {this.renderProductCards()}
+          </ ReactCSSTransitionGroup>
         }
         {this.props.itemList.length === 0 ? '' :
           <div>

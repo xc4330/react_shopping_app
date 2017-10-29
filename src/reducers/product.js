@@ -1,6 +1,7 @@
 import {
   GET_PRODUCT_SUCCESS,
   SELECT_PRODUCT,
+  RESET_PRODUCT_LIST,
 } from '../actions/productActions'
 
 const INIT_STATE = {
@@ -20,6 +21,12 @@ export default function(state = INIT_STATE, action) {
       return {
         ...state,
         selected: action.payload,
+      }
+      break
+    case RESET_PRODUCT_LIST:
+      return {
+        ...state,
+        all: [],
       }
       break
     default:

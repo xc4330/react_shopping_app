@@ -34,7 +34,7 @@ class ProductDetail extends Component{
                 $ {this.props.selectedProduct.price}
               </div>
             </div>
-            <button className={styles.addBtn + " btn btn-primary"} onClick={this.handleAddToCart}>
+            <button className={styles.addBtn + " btn"} onClick={this.handleAddToCart}>
               Add to cart
             </button>
           </div>

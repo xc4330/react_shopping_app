@@ -6,6 +6,7 @@
   align-items: center;
   height: calc(100% - var(--navi-bar-height));
   overflow-y: auto;
+  background-color: var(--color-primary-5);
 }
 
 :local(.imageContainer){
@@ -43,7 +44,15 @@
 }
 
 :local(.addBtn){
+  text-align: center;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+}
 
+:local(.addBtn):active{
+  background-color: #3e8e41;
+  transform: translateY(4px);
 }
 
 :local(.contentContainer){

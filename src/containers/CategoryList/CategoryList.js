@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 //actions
 import { getCategory, selectCategory } from '../../actions/categoryActions'
+import { resetProductList } from '../../actions/productActions'
 //components
 import CategoryCard from '../../components/CategoryCard'
 //style
@@ -42,16 +44,21 @@ class CategoryList extends Component{
     this.props.history.push('/products')
   }
 
-
-
   componentDidMount(){
+    // reset stored product list when user come back to category page
+    this.props.resetProductList()
     this.props.getCategory()
   }
 
   render() {
     return (
       <div className={styles.container}>
-        {this.renderCategoryCards()}
+        <ReactCSSTransitionGroup
+          transitionName="card-animation"
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={200}>
+            {this.renderCategoryCards()}
+        </ReactCSSTransitionGroup>
       </div>
     )
   }
@@ -65,4 +72,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, { getCategory, selectCategory })(CategoryList)
+export default connect(mapStateToProps, { getCategory, selectCategory, resetProductList })(CategoryList)
