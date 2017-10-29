@@ -22,9 +22,11 @@ class Home extends Component{
     return (
       <div className={styles.container}>
         <NaviBar
-          currentPath = {this.props.history.location.pathname}
+          title = {this.renderPageTitle()}
           goBack = {() => this.props.history.goBack()}
           showCart = {() => this.props.history.push('/shopping-cart')}
+          hideCartBtn = {this.shouldHideCartBtn()}
+          hideBackBtn = {this.shouldHideBackBtn()}
         />
         <Switch>
           <Route path="/categories" name="CategoryList" component={CategoryList}/>
@@ -36,10 +38,48 @@ class Home extends Component{
       </div>
     )
   }
+
+  //
+
+  // render page title based on path
+  renderPageTitle(){
+    switch (this.props.history.location.pathname){
+      case '/categories':
+        return ''
+      case '/shopping-cart':
+        return 'Shopping Cart'
+      case '/products':
+        return this.props.selectedCategory.name
+      case '/product-detail':
+        return this.props.selectedProduct.name
+    }
+  }
+
+  // check if needs to show back btn
+  shouldHideBackBtn(){
+    if(this.props.history.location.pathname === "/categories"){
+      return true
+    }
+    return false
+  }
+
+  // check if needs to show back btn
+  shouldHideCartBtn(){
+    if(this.props.history.location.pathname === "/shopping-cart"){
+      return true
+    }
+    return false
+  }
+
 }
 
 function mapStateToProps(state) {
+  let { product, category, shoppingCart } = state
+  let selectedProduct = product.selected
+  let selectedCategory = category.selected
   return {
+    selectedProduct,
+    selectedCategory,
   }
 }
 

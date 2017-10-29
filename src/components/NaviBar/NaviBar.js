@@ -17,37 +17,21 @@ export default class NaviBar extends Component{
         <div className={styles.leftItemGroup}>
           <button
             className={styles.goBackBtn + " btn icon-arrow-left"}
-            style={this.shouldHideBackBtn() ? {display : "none"} : {}}
+            style={this.props.hideBackBtn ? {display : "none"} : {}}
             onClick={this.props.goBack}
           />
         </div>
         <div className={styles.centerItemGroup}>
-            Navi Bar
+            {this.props.title}
         </div>
         <div className={styles.rightItemGroup}>
           <button
             className={styles.cartBtn + " btn icon-basket"}
             onClick={this.props.showCart}
-            style={this.shouldHideCartBtn() ? {display : "none"} : {}}
+            style={this.props.hideCartBtn ? {display : "none"} : {}}
           />
         </div>
       </div>
     )
-  }
-
-  // check if needs to show back btn
-  shouldHideBackBtn(){
-    if(this.props.currentPath === "/categories"){
-      return true
-    }
-    return false
-  }
-
-  // check if needs to show back btn
-  shouldHideCartBtn(){
-    if(this.props.currentPath === "/shopping-cart"){
-      return true
-    }
-    return false
   }
 }

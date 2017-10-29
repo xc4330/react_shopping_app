@@ -2,7 +2,7 @@
   {
     "pid" : 1,
     "name" : "Microwave Oven",
-    "description" : "",
+    "description" : "A microwave oven (commonly referred to as a microwave) is a kitchen appliance that heats and cooks food by exposing it to electromagnetic radiation in the microwave frequency range. This induces polar molecules in the food to rotate and produce thermal energy in a process known as dielectric heating. Microwave ovens heat foods quickly and efficiently because excitation is fairly uniform in the outer 25–38 mm (1–1.5 inches) of a homogeneous, high water content food item; food is more evenly heated throughout than generally occurs in other cooking techniques.",
     "price" : "129.0",
     "image" : "https://image.ibb.co/dbLckm/50577487.jpg",
     "cid" : 1
@@ -10,7 +10,7 @@
   {
     "pid" : 2,
     "name" : "Television",
-    "description" : "",
+    "description" : "Television (TV) is a telecommunication medium used for transmitting moving images in monochrome (black and white), or in colour, and in two or three dimensions and sound. The term can refer to a television set, a television program, or the medium of television transmission. Television is a mass medium for entertainment, education, news, politics, gossip, and advertising.",
     "price" : "399.0",
     "image" : "https://image.ibb.co/mhkckm/012412_0717_Beginningof1.png",
     "cid" : 1
@@ -18,7 +18,7 @@
   {
     "pid" : 3,
     "name" : "Vacuum Cleaner",
-    "description" : "",
+    "description" : "A vacuum cleaner, also known as a sweeper or hoover, is a device that uses an air pump (a centrifugal fan in all but some of the very oldest models), to create a partial vacuum to suck up dust and dirt, usually from floors, and from other surfaces such as upholstery and draperies.",
     "price" : "89.0",
     "image" : "https://preview.ibb.co/he0Gd6/numatic_het200_hetty_vacuum_cleaner_96442_1486485783.jpg",
     "cid" : 1
@@ -26,7 +26,7 @@
   {
     "pid" : 4,
     "name" : "Table",
-    "description" : "",
+    "description" : "A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things. Some common types of table are the dining room table, which is used for seated persons to eat meals; the coffee table, which is a low table used in living rooms to display items or serve refreshments; and the bedside table, which is used to place an alarm clock and a lamp. There are also a range of specialized types of tables, such as drafting tables, used for doing architectural drawings, and sewing tables.",
     "price" : "119.0",
     "image" : "https://image.ibb.co/deLA5m/15587335.jpg",
     "cid" : 2
@@ -34,7 +34,7 @@
   {
     "pid" : 5,
     "name" : "Chair",
-    "description" : "",
+    "description" : "A chair is a piece of furniture with a raised surface supported by legs, commonly used to seat a single person. Chairs are supported most often by four legs and have a back;[1][2] however, a chair can have three legs or can have a different shape.[3] Chairs are made of a wide variety of materials, ranging from wood to metal to synthetic material (e.g. plastic), and they may be padded or upholstered in various colors and fabrics, either just on the seat (as with some dining room chairs) or on the entire chair.",
     "price" : "39.0",
     "image" : "https://image.ibb.co/iYeEWR/d40627b2_3882_432a_b992_6f2f64587e1e_1_270c98e9e8c7c5fd2b8bc2d74cd50e67.jpg",
     "cid" : 2
@@ -42,7 +42,7 @@
   {
     "pid" : 6,
     "name" : "Almirah",
-    "description" : "",
+    "description" : "A cabinet is a box-shaped piece of furniture with doors and/or drawers for storing miscellaneous items. Some cabinets stand alone while others are built in to a wall or are attached to it like a medicine cabinet. Cabinets are typically made of wood (solid or with veneers or artificial surfaces), coated steel (common for medicine cabinets), or synthetic materials. Commercial grade cabinets, which differ in the materials used, are called casework.",
     "price" : "299.0",
     "image" : "https://image.ibb.co/kiixkm/wooden_almirah_500x500.jpg",
     "cid" : 2
