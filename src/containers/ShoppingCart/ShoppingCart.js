@@ -26,7 +26,7 @@ class ShoppingCart extends Component{
             mode = "cart" // allow product card to show delete btn and quantity
             onDelete = {() => this.props.removeItem(item.product)}
             quantity = {item.quantity}
-            key={index}
+            key={item.product.pid}
           />
         )
       })
@@ -50,7 +50,7 @@ class ShoppingCart extends Component{
             transitionName="card-animation"
             transitionAppearTimeout={200}
             transitionEnterTimeout={200}
-            transitionLeaveTimeout={500}>
+            transitionLeaveTimeout={400}>
             {this.renderProductCards()}
           </ ReactCSSTransitionGroup>
         }

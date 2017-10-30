@@ -13,6 +13,8 @@ import 'font-awesome/css/font-awesome.min.css'
 import 'simple-line-icons/css/simple-line-icons.css'
 // Import Main styles for this application
 import '../scss/style.scss'
+// Import Animate.css
+import 'animate.css/animate.min.css'
 
 // Containers
 import Home from './containers/Home/'

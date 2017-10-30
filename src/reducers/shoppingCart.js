@@ -2,10 +2,13 @@ import _ from 'lodash'
 import {
   ADD_ITEM,
   REMOVE_ITEM,
+  START_CART_ANIMATION,
+  STOP_CART_ANIMATION,
 } from '../actions/shoppingCartActions'
 
 const INIT_STATE = {
   itemList: [], // list of { product: PRODUCT, quantity: INT }
+  animated: false, // control indicator animation
 }
 
 export default function(state = INIT_STATE, action) {
@@ -20,6 +23,18 @@ export default function(state = INIT_STATE, action) {
       return {
         ...state,
         itemList: removeItem([...state.itemList], action.payload),
+      }
+      break
+    case START_CART_ANIMATION:
+      return {
+        ...state,
+        animated: true,
+      }
+      break
+    case STOP_CART_ANIMATION:
+      return {
+        ...state,
+        animated: false,
       }
       break
     case "persist/REHYDRATE": // loading shopping cart on app start

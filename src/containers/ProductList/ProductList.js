@@ -17,25 +17,17 @@ class ProductList extends Component{
 
   renderProductCards() {
     let productList = this.props.productList
-    if(productList.length === 0){
-      return (
-        <div>
-          Loading products...
-        </div>
-      )
-    } else {
-      return (
-        productList.map((product,index) => {
-          return (
-            <ProductCard
-              product = {product}
-              onSelect = {() => this.handleProductSelect(product)}
-              key={index}
-            />
-          )
-        })
-      )
-    }
+    return (
+      productList.map((product,index) => {
+        return (
+          <ProductCard
+            product = {product}
+            onSelect = {() => this.handleProductSelect(product)}
+            key={product.pid}
+          />
+        )
+      })
+    )
   }
 
   handleProductSelect(product) {
@@ -51,6 +43,11 @@ class ProductList extends Component{
   render() {
     return (
       <div className={styles.container}>
+        {this.props.productList.length === 0 ?
+          <div>
+            Loading products...
+          </div> : ''
+        }
         <ReactCSSTransitionGroup
           transitionName="card-animation"
           transitionEnterTimeout={200}

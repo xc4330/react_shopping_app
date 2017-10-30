@@ -10,7 +10,7 @@ export default class ProductCard extends Component{
   render() {
     return (
       <div className={styles.container}>
-        <div className={styles.imageContainer} >
+        <div className={styles.imageContainer} onClick={this.props.onSelect}>
           <img src={this.props.product.image} className={styles.image}/>
         </div>
         <div className={styles.textContainer} onClick={this.props.onSelect} style={this.props.mode === "cart" ? {width : "calc(100% - 100px - 80px)"} : {width : "calc(100% - 100px)"}}>

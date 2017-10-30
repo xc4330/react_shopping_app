@@ -7,9 +7,6 @@ export default class NaviBar extends Component{
     super(props)
   }
 
-  componentDidMount(){
-  }
-
   render() {
     return (
       <div className={styles.container}>
@@ -25,11 +22,11 @@ export default class NaviBar extends Component{
         </div>
         <div className={styles.rightItemGroup}>
           <button
-            className={styles.cartBtn + " btn icon-basket"}
+            className={this.props.cartAnimated ? styles.cartBtn + " btn icon-basket animated pulse" : styles.cartBtn + " btn icon-basket"}
             onClick={this.props.showCart}
             style={this.props.hideCartBtn ? {display : "none"} : {}}
           />
-          <div className={styles.cartIndicator} style={this.props.cartIsEmpty || this.props.hideCartBtn ? {display : "none"} : {}} />
+          <div className={this.props.cartAnimated ? styles.cartIndicator + " animated bounce" : styles.cartIndicator} style={this.props.cartIsEmpty || this.props.hideCartBtn ? {display : "none"} : {}} />
         </div>
       </div>
     )

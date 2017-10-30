@@ -28,6 +28,7 @@ class Home extends Component{
           hideCartBtn = {this.shouldHideCartBtn()}
           hideBackBtn = {this.shouldHideBackBtn()}
           cartIsEmpty = {this.props.addedProducts.length === 0 ? true : false}
+          cartAnimated = {this.props.cartAnimated}
         />
         <Switch>
           <Route path="/categories" name="CategoryList" component={CategoryList}/>
@@ -79,10 +80,12 @@ function mapStateToProps(state) {
   let selectedProduct = product.selected
   let selectedCategory = category.selected
   let addedProducts = shoppingCart.itemList
+  let cartAnimated = shoppingCart.animated
   return {
     selectedProduct,
     selectedCategory,
     addedProducts,
+    cartAnimated,
   }
 }
 

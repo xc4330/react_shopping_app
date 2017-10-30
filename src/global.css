@@ -5,8 +5,15 @@
   --color-primary-1: #8D9BB2;
   --color-primary-2: #ABB5C6;
   --color-primary-3: #A2A6AD;
-  --color-primary-4: #8D929A;
+  --color-primary-4: #E4E5E6;
   --color-primary-5: #EEEFF1;
+}
+
+* {
+user-select: none;
+-moz-user-select: -moz-none;
+-khtml-user-select: none;
+-webkit-user-select: none;
 }
 
 .card-animation-enter {
@@ -29,9 +36,11 @@
 
 .card-animation-leave {
   opacity: 1;
+  transform: translate(0);
 }
 
 .card-animation-leave.card-animation-leave-active {
   opacity: 0.01;
-  transition: all 200ms ease-in-out;
+  transform: translate(-100%);
+  transition: all 400ms ease-in-out;
 }
